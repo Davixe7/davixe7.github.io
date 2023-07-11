@@ -1,0 +1,62 @@
+.about-us__content {
+  .about-us__title {
+    margin-bottom: 1rem;
+  }
+  p {
+    font-weight: 400;
+    color: #857875;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 500px;
+    width: 400px;
+    background: url('./../img/benefits.png');
+    border-radius: 20px;
+    background-size: cover;
+    display: none;
+    @media(min-width: 991px){
+      display: block;
+    }
+  }
+}
+
+.mvo-card {
+  text-align: center;
+  height: 100%;
+  &__content {
+    font-weight: 400;
+    color: #857875;
+    p {
+      font-weight: 400;
+    }
+  }
+  &__content i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+  &__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+.members-carousel {
+  h4 {
+    color: #000;
+  }
+  p {
+    color: #878585;
+  }
+  .card img {
+    max-height: 300px;
+    object-fit: cover;
+  }
+}

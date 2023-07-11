@@ -1,0 +1,100 @@
+$primary: #CD9B28;
+
+@mixin btn-3d(
+  $background-color: #ddf,
+  $color: #fff,
+  $shadow-color-1: darken($background-color, 8%),
+  $shadow-color-2: darken($background-color, 10%),
+  $height: 6px){
+  
+  background-color: $background-color;
+  color: $color;
+  box-shadow:
+    0 0 0 1px $shadow-color-1 inset
+    , 0 0 0 2px rgba(255, 255, 255, 0.10) inset
+    , 0 $height 0 0 $shadow-color-2
+    , 0 6px 1px 1px rgba(0, 0, 0, .3)
+    , 0 8px 8px 1px rgba(0, 0, 0, .2)
+    ;
+  &:active,
+  &.active {
+    background-color: $background-color;
+    color: $color;
+    box-shadow:
+      0 0 0 1px $shadow-color-1 inset
+      , 0 0 0 2px rgba(255, 255, 255, 0.15) inset
+      , 0 1px 1px 0px rgba(0, 0, 0, .3)
+      , 0 1px 3px 1px rgba(0, 0, 0, .2)
+      ;
+  }
+}
+  
+.btn {
+  border: 0;
+  border-radius: 10px;
+  margin: 10px 4px;
+  &:active:focus,
+  &:focus:hover,
+  &:focus {
+    -moz-outline-style: none;
+    outline: medium none;
+  }
+}
+
+.btn {
+  border: 0;
+  margin: 10px 4px;
+  &:active:focus,
+  &:focus:hover,
+  &:focus {
+    -moz-outline-style: none;
+    outline: medium none;
+  }
+}
+
+.btn-3d {
+  position: relative; 
+  top: -6px;
+  border: 0;
+  transition: all 40ms linear;
+  margin: 10px 4px;
+  &:active:focus,
+  &:focus:hover,
+  &:focus {
+    -moz-outline-style: none;
+    outline: medium none;
+  }
+  &:active,
+  &.active {
+    top: 0;
+  }
+  &.btn-white {
+    @include btn-3d(#fff, #95711F, #ebebeb, #f5f5f5);
+  }
+  &.btn-default {
+    @include btn-3d(#f9f9f9, #95711F, #ebebeb, #BEBEBE);
+  }
+  &.btn-primary {
+    // @include btn-3d(#4274D7, #fff, #417fbd, #4D5BBE);
+    @include btn-3d($primary);
+  }
+  &.btn-success {
+    // @include btn-3d(#78d739, #fff, #31c300, #5eb924);
+    @include btn-3d(#5cb85c);
+  }
+  &.btn-info {
+    // @include btn-3d(#39B3D7, #fff, #00a5c3, #348FD2);
+    @include btn-3d(#5bc0de);
+  }
+  &.btn-warning {
+    // @include btn-3d(#FEAF20, #fff, #d79a47, #D79A34);
+    @include btn-3d(#f0ad4e);
+  }
+  &.btn-danger {
+    // @include btn-3d(#D73814, #fff, #b93802, #AA0000);
+    @include btn-3d(#d9534f);
+  }
+  &.btn-custom {
+    @include btn-3d(grey);
+  }
+}

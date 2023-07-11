@@ -1,0 +1,196 @@
+:root {
+  --primary: #CD9B28;
+  --accent: #CD9B28;
+  --secondary: #878585;
+}
+.text-accent {
+  color: var(--accent) !important;
+}
+@mixin reset-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+@import './buttons.scss';
+@import './navbar.scss';
+@import './headings.scss';
+
+@import './hero.scss';
+@import './services.scss';
+@import './home-choose-us.scss';
+@import './benefits.scss';
+@import './testimonials.scss';
+@import './aboutus.scss';
+@import './faqs.scss';
+@import './contactus.scss';
+@import './footer.scss';
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+}
+
+.py-lg {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.card {
+  overflow: hidden;
+}
+
+body {
+  background: #fff;
+  text-align: center;
+  @media(min-width: 991px){
+    text-align: left;
+  }
+}
+
+.row > * {
+  padding-left: var(--bs-gutter-x);
+  padding-right: var(--bs-gutter-x);
+}
+
+.text-primary {
+  color: var(--accent) !important;
+}
+.text-secondary {
+  color: var(--secondary) !important;
+}
+
+.btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  padding: 2.5px 27px;
+  white-space: nowrap;
+}
+.btn-lg {
+  font-size: 2.06rem;
+  padding-left: 3.75rem;
+  padding-right: 3.75rem;
+  border-radius: 15px;
+}
+.btn.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: #745716;
+}
+.btn-secondary {
+  color: var(--accent);
+  background: #fff;
+  border-color: #ababab;
+}
+
+#subscribe {
+  background-image: url('./../img/leaves.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center 165px;
+  @media(min-width: 991px){
+    padding: 35px 0 50px;
+    background-size: inherit;
+    background-position: center 65px;
+  }
+  // background: url('./../img/silueta.png') no-repeat 60px -40px, url('./../img/silueta_2.png') no-repeat 95% -40px;
+}
+.form-container input {
+  font-size: 1.25rem;
+  height: 46px;
+  width: 336px;
+  padding: 0 1rem;
+  border: .5px solid #CAC8C8;
+  border-radius: 10px;
+  background: #F6F6F6;
+  box-shadow: 0 4px 4px rgba(0,0,0,.25);
+  margin-bottom: 1rem;
+  text-align: center;
+  @media(min-width: 991px){
+    text-align: left;
+    margin-right: 2rem;
+  }
+}
+
+.form-container .btn {
+  width: 100%;
+  @media(min-width: 991px){
+    width: fit-content;
+  }
+}
+
+.ts-item {
+  position: relative;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+  }
+  .card {
+    height: 335px;
+  }
+  &__title {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 100;
+    margin-top: -50px;
+    padding-right: 3rem;
+    border-radius: 15px;
+    background: linear-gradient(270deg, #CD9B28 14.19%, rgba(205, 155, 40, 0.00) 100%);
+  }
+}
+
+.ts-item--video {
+  &:hover {
+    &::before {
+      transform: translate(-50%, -50%) scale(1.25);
+      transform-origin: center;
+    }
+  }
+  &::before {
+    pointer-events: none;
+    content: '';
+    background: url('./../img/play.svg') no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 130px;
+    height: 130px;
+    transition: all .3s;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    opacity: .5;
+  }
+}
+
+.owl-dots .owl-dot {
+  margin-right: 1rem;
+  span {
+    background: #C4C4C4;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 2px !important;
+    display: inline-block;
+  }
+  &.active {
+    span {
+      background-color: #CD9B28 !important;
+    }
+  }
+}

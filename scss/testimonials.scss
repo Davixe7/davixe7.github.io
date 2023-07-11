@@ -1,0 +1,39 @@
+#testimonials {
+  background: url('./../img/logo_shade.png') no-repeat -16px 100px, linear-gradient(to right, #504F4F, rgba(103,103,103, 67%));
+}
+#testimonials .carousel-indicators {
+  bottom: -2rem;
+  margin: 0 auto;
+  padding: 0;
+  
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  button {
+    background: #C4C4C4;
+    height: 15px;
+    width: 15px;
+    border-radius: 2px;
+    flex: 0 0 15px;
+    padding: 0;
+    border: none;
+    &.active {
+      background: #CD9B28;
+      flex: 0 0 20px;
+      width: 20px;
+      border-radius: 5px;
+    }
+  }
+
+  @media(min-width: 991px){
+    top: 0;
+    left: -2.5rem;
+    flex-flow: column;
+    margin: 0;
+
+    button {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

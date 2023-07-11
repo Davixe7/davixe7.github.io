@@ -1,0 +1,141 @@
+#services {
+  position: relative;
+  background: url('./../img/services_bg.png') no-repeat;
+  background-position: -50% top; 
+
+  .shape {
+    top: 0;
+    bottom: 0;
+    right: 95px;    
+    position: absolute;
+    width: 234px;
+    border-radius: 0px 0px 20px 20px;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.70) 0%, rgba(103, 103, 103, 0.70) 100%);
+    z-index: 0;
+  }
+  .picture {
+    margin-bottom: 1rem;
+  }
+
+  @media(min-width: 991px){
+    background-position: left top;
+    .picture {
+      padding-right: 105px;
+    }
+  }
+}
+.service-item {
+  order: 1;
+}
+.service-item__header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 0 0 25px;
+}
+.service-item__title {
+  color: #6B6B6B;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.service-item__number {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 74px;
+  width: fit-content;
+  padding: 1.25rem .9rem 1.625rem;
+  margin-bottom: 1.5rem;
+
+  border-radius: 10px;
+  background: #95711F;
+}
+.service-item__content {
+  color: #878585;
+  margin-bottom: 30px;
+}
+.service-item__picture {
+  display: flex;
+  justify-content: center;
+  order: 0;
+  position: relative;
+  z-index: 10000;
+  margin-bottom: 1rem;
+  img {
+    width: auto !important;
+  }
+}
+
+.service-items .owl-dots {
+  margin-bottom: 20px;
+}
+
+@media(min-width: 991px){
+  .service-items {
+    text-align: left;
+    padding: 25px 0 50px 0;
+  }
+  .service-item {
+    order: 0;
+    &__header {
+      flex-flow: row;
+      padding: 50px 0;
+    }
+    &__title {
+      flex-flow: row;
+    }
+    &__number {
+      margin: 0 2.15rem 0 0;
+    }
+    &__picture {
+      justify-content: end;
+      order: 1;
+    }
+  }
+}
+
+.service-card {
+  margin-bottom: 2.5rem;
+  border-radius: 20px;
+
+  &__title {
+    color: rgba(10, 10, 10, 0.70);
+    font-family: 'Playfair Display', serif;
+    font-size: 1.375rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__content {
+    color: #878585;
+    font-family: 'Barlow', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    min-height: 8rem;
+  }
+  &__number {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #95711F;
+    width: 4rem;
+    height: 4rem;
+    margin: -2rem 0 0 1rem; 
+  }
+  .btn.btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}

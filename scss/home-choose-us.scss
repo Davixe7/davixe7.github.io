@@ -1,0 +1,32 @@
+.section-chooseus {
+  padding: 0;
+  .container {
+    background: url('./../img/chooseus.jpg') no-repeat center;
+    background-size: cover;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  &__card {
+    color: #fff;
+    padding: 25px 27.5px;
+    border-radius: 50px;
+    background: rgba(205,155,40, 54%);
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 2.75rem;
+  }
+
+  @media(min-width: 991px){
+    padding: 60px 0;
+    .container {
+      background-size: inherit;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    &__card {
+      height: 584px;
+      padding: 100px 45px 120px 60px;
+    }
+  }
+}

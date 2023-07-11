@@ -1,0 +1,77 @@
+#contact-us {
+  text-align: left;
+  background: url('./../img/contactus.png') center no-repeat;
+  .page-header {
+    background-image: url('./../img/contactus.jpg');
+    background-position: center -300px;
+    background-color: rgba(0,0,0,.5);
+    background-size: cover;
+  }
+  .btn.btn-primary {
+    width: 100%;
+    @media(min-width: 991px){
+      width: fit-content;
+    }
+  }
+}
+label {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: .5rem;
+}
+.form-control {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.contact-info {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.05rem;
+  ul {
+    @include reset-list;
+    > li {
+      line-height: 4rem;
+    }
+  }
+  a {
+    color: #505050 !important;
+    i {
+      color: #505050;
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.contact-socials-nav {
+  @include reset-list;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 2rem 0;
+
+  li {
+    margin: 0 1rem 1rem 0;
+    padding: .75rem 1.5rem .75rem 1rem;
+    border: 1px solid #505050;
+    border-radius: 30px;
+    text-align: center;
+    &:hover {
+      a, i {
+        color: #fff;
+      }
+      background: var(--accent);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+    a {
+      color: #505050;
+    }
+  }
+  @media(min-width: 991px){
+    font-size: 1rem;
+    text-align: left;
+    flex-flow: row;
+    justify-content: space-between;
+  }
+}

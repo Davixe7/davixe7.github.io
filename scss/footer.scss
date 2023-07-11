@@ -1,0 +1,128 @@
+.footer {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.125rem;
+  padding-top: 80px;
+  border-radius: 64px 64px 0 0;
+  background: linear-gradient(90deg, #000 0%, #676767 68.42%, #979797 100%);
+
+  &__contact-links {
+    padding-left: 24px;
+  }
+
+  &__logo-column {
+    display: flex;
+    flex-flow: column;
+  }
+
+  @media(min-width: 991px){
+    &__contact-links {
+      padding-left: 52px !important;
+    }
+    &__logo-column {
+      padding-left: 0 !important;
+    }
+    &__quick-links {
+      padding-left: 0 !important;
+    }
+  }
+}
+.footer .row > div {
+  margin-bottom: 4rem;
+}
+
+.footer-contact-list {
+  @include reset-list;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  li {
+    margin-bottom: 1.25rem;
+    a {
+      color: #fff;
+      text-decoration: none;
+
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      line-height: 1.35rem;
+      i {
+        flex: 0 0 1.65rem;
+        margin-right: 0.75rem;
+      }
+      @media(min-width: 991px){
+        flex-flow: row;
+      }
+    }
+  }
+}
+
+.footer .socials-nav {
+  display: inline-flex;
+  margin-top: 2.05rem;
+  li {
+    background: var(--accent);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.95rem;
+    padding: 0;
+    transition: all .4s;
+    &:hover {
+      transform: translateY(-.25rem);
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  a {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  i {
+    font-size: .95rem;
+  }
+}
+
+.footer .quick-links {
+  @include reset-list;
+
+  li {
+    padding: .5rem 0;
+    &:first-child { padding-top: 0; margin-top: -.65rem; }
+    &:hover {
+      &::before {
+        margin-right: 1.75rem;
+      }
+    }
+  }
+  @media(min-width: 991px){
+    margin-left: -.45rem;
+    li::before {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 1.25rem;
+      border-radius: 2px;
+      background: #CD9B28;
+      transition: all .4s;
+    }
+  }
+}
+
+.copyright {
+  font-family: 'Barlow', sans-serif;
+  min-height: 100px;
+  img {
+    height: 30px !important;
+    width: auto !important;
+    flex: none;
+  }
+}
+
+.footer h4 {
+  font-weight: 400;
+}
