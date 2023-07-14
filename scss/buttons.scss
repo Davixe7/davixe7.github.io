@@ -69,10 +69,10 @@ $primary: #CD9B28;
     top: 0;
   }
   &.btn-white {
-    @include btn-3d(#fff, #95711F, #ebebeb, #f5f5f5);
+    @include btn-3d(#fff, #95711F, #ebebeb, #BFBFBF);
   }
   &.btn-default {
-    @include btn-3d(#f9f9f9, #95711F, #ebebeb, #BEBEBE);
+    @include btn-3d(#f9f9f9, #95711F, #ebebeb, #BFBFBF);
   }
   &.btn-primary {
     // @include btn-3d(#4274D7, #fff, #417fbd, #4D5BBE);

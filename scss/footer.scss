@@ -36,21 +36,26 @@
   font-size: 1.125rem;
   li {
     margin-bottom: 1.25rem;
-    a {
-      color: #fff;
-      text-decoration: none;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.35rem;
 
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      line-height: 1.35rem;
-      i {
-        flex: 0 0 1.65rem;
-        margin-right: 0.75rem;
-      }
-      @media(min-width: 991px){
-        flex-flow: row;
-      }
+    &:hover {
+      color: var(--accent);
+    }
+    
+    i {
+      flex: 0 0 1.65rem;
+      margin-right: 0.75rem;
+    }
+
+    @media(min-width: 991px){
+      justify-content: flex-start;
     }
   }
 }
@@ -116,6 +121,7 @@
 .copyright {
   font-family: 'Barlow', sans-serif;
   min-height: 100px;
+  padding: 20px 0;
   img {
     height: 30px !important;
     width: auto !important;

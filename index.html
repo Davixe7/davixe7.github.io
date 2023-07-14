@@ -20,14 +20,25 @@
 </head>
 
 <body>
+  <!-- BUTTON -->
+  <div class="contact-fabs">
+    <a class="contact-fab btn btn-primary btn-option" target="_blank" href="#" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="left">
+      <i class="fab fa-instagram contact-fab__icon" aria-hidden="true"></i>
+    </a>
+    <a class="contact-fab btn btn-primary btn-option" target="_blank" href="#" data-bs-toggle="tooltip" data-bs-title="Facebook" data-bs-placement="left">
+      <i class="fab fa-facebook contact-fab__icon" aria-hidden="true"></i>
+    </a>
+    <a class="contact-fab btn btn-primary">
+      <i class="fas fa-comments contact-fab__icon" aria-hidden="true"></i>
+    </a>
+  </div>
 
   <!-- PRE-HEADER -->
   <div class="preheader d-sm-flex sticky-top">
     <div class="preheader__content container px-lg-0">
       <ul class="socials-nav d-sm-flex">
         <li>
-          <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook"
-            data-bs-placement="bottom">
+          <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook" data-bs-placement="bottom">
             <i class="fa-brands fa-facebook"></i>
           </a>
         </li>
@@ -79,7 +90,7 @@
   <nav class="navbar navbar-dark navbar-expand-lg sticky-top bg-lg-none">
     <div class="container ps-lg-0">
       <a class="navbar-brand" href="index.html">
-        <img src="./img/logo.png" alt="Logo" width="77" height="auto">
+        <img src="./img/logo.png" alt="Logo" width="90" height="auto">
       </a>
 
       <a class="nav-link d-sm-none me-3 ms-auto" href="#"><img src="./img/search.png" alt="#"></a>
@@ -286,7 +297,7 @@
     </div>
   </section>
 
-  <section id="choouseus" class="section-chooseus">
+  <section id="choouseus" class="section-chooseus pb-lg-0">
     <div class="container">
       <div class="row">
         <div class="col-lg-5 offset-lg-1 px-lg-0">
@@ -371,7 +382,7 @@
   <section id="testimonials">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 ps-lg-5 pb-5">
+        <div class="col-lg-6 ps-lg-5">
           <h2 class="mb-lg-5 pb-lg-5 text-primary">
             What Customers Say
           </h2>
@@ -383,14 +394,14 @@
             View More
           </a>
         </div>
-        <div class="col-lg-5 offset-lg-1 pe-lg-5">
+        <div class="col-lg-5 offset-lg-1 pe-lg-0">
           <div class="owl-carousel owl-theme testimonials-carousel" style="width: 100%;">
 
             <div class="item ts-item ts-item--video">
-              <a href="https://www.youtube.com/watch?v=JpxsRwnRwCQ" data-fancybox="testimonials">
-                <div class="ts-item__img" style="width: 335px;">
+              <a href="https://www.youtube.com/watch?v=JpxsRwnRwCQ" class="owl-video" data-fancybox="testimonials">
+                <!-- <div class="ts-item__img" style="width: 335px;">
                   <img src="./img/carousel.png" alt="#">
-                </div>
+                </div> -->
                 <div class="ts-item__title">
                   John Smith
                 </div>
@@ -527,7 +538,7 @@
       </div>
     </div>
 
-    <div class="copyright bg-black text-white py-4 pb-lg-0">
+    <div class="copyright bg-black text-white pb-lg-0">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto ps-lg-0 d-flex flex-column flex-lg-row justify-content-lg-between align-items-center">
@@ -555,7 +566,8 @@
       margin: 0,
       nav: false,
       items: 1,
-      dots: false
+      dots: false,
+      autoplay: true, autoplayHoverPause: true
     })
 
     $('.owl-carousel.testimonials-carousel').owlCarousel({
@@ -565,7 +577,8 @@
       loop: true,
       margin: 10,
       nav: false,
-      video: true
+      video: true,
+      autoplay: true, autoplayHoverPause: true
     })
   </script>
 
@@ -591,9 +604,9 @@
       el.addEventListener('mouseleave', () => bootstrap.Tooltip.getInstance(el).enable())
     })
 
-    Fancybox.bind('[data-fancybox]', {
-      Thumbs: false
-    });
+    // Fancybox.bind('[data-fancybox]', {
+    //   Thumbs: false
+    // });
   </script>
 </body>
 

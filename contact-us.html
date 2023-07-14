@@ -79,7 +79,7 @@
   <nav class="navbar navbar-dark navbar-expand-lg sticky-top bg-lg-none">
     <div class="container ps-lg-0">
       <a class="navbar-brand" href="index.html">
-        <img src="./img/logo.png" alt="Logo" width="77" height="auto">
+        <img src="./img/logo.png" alt="Logo" width="90" height="auto">
       </a>
 
       <a class="nav-link d-sm-none me-3 ms-auto" href="#"><img src="./img/search.png" alt="#"></a>
@@ -128,7 +128,7 @@
         <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
           <div class="card rounded-4">
             <div class="card-header bg-white border-none">
-              <h4 class="text-dark">Leave a message</h4>
+              <h4 class="text-dark text-center text-lg-start">Leave a message</h4>
             </div>
             <div class="card-body">
               <div>
@@ -181,11 +181,14 @@
             </li>
           </ul>
         </div>
+
         <div class="col-lg-6 order-lg-1">
-          <div style="width: 100%"><iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0"
+          <div style="width: 100%; border-radius: 15px; overflow: hidden;">
+            <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0"
               marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=5191%20Eastside%20Hwy%20Stevensville,%20MT%2059870+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
-                href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe>
+              src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=5191%20Eastside%20Hwy%20Stevensville,%20MT%2059870+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              <a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a>
+            </iframe>
           </div>
         </div>
       </div>
@@ -362,6 +365,7 @@
       loop: true,
       margin: 30,
       nav: false,
+      autoplay: true, autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,

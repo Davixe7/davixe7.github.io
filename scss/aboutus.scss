@@ -27,6 +27,9 @@
 .mvo-card {
   text-align: center;
   height: 100%;
+  transition: all .4s;
+  user-select: none;
+
   &__content {
     font-weight: 400;
     color: #857875;
@@ -46,17 +49,52 @@
   .card-body {
     padding: 1.5rem;
   }
+
+  &:hover {
+    .mvo-card__title, i {
+      color: var(--accent);
+    }
+    transform: translateY(-1rem);
+  }
 }
 
 .members-carousel {
-  h4 {
-    color: #000;
+  .card {
+    margin-bottom: 1rem;
+    transition: all .4s;
+    &:hover {
+      box-shadow: 0 4px 8px 1px rgba(0,0,0,.15);
+      img {
+        
+      }
+    }
   }
-  p {
+}
+
+.team-member-card {
+  &__picture {
+    max-height: 300px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: all .4s;
+    }
+  }
+  &__name {
+    color: #333;
+  }
+  &__title {
     color: #878585;
   }
-  .card img {
-    max-height: 300px;
-    object-fit: cover;
+}
+
+.team-member-card:hover {
+  box-shadow: 0 4px 8px 1px rgba(0,0,0,.15);
+  .team-member-card__picture img {
+    transform: scale(1.15);
+  }
+  .team-member-card__name {
+    color: var(--accent);
   }
 }

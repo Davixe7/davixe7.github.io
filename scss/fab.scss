@@ -1,0 +1,60 @@
+.contact-fabs {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  right: 25px;
+  bottom: 30px;
+  z-index: 10000;
+
+  &:hover {
+    .btn-option {
+      display: flex;
+      opacity: 1;
+    }
+  }
+}
+
+
+.btn-option {
+  opacity: 0;
+  width: 35px !important;
+  height: 35px !important;
+  transition: all .4s;
+}
+
+.contact-fab {
+  position: relative;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  margin: 0 0 1rem 0;
+  padding: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: var(--accent);
+
+  border-radius: 50%;
+  box-shadow: 0 1px 3px 1px rgba(0,0,0,.25);
+  cursor: pointer;
+
+  &__icon {
+    color: #fff;
+    font-size: .9rem;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    border: 1px solid var(--accent);
+    left: -5px;
+    top: -5px;
+    bottom: -5px;
+    right: -5px;
+    border-radius: 50%;
+  }
+}

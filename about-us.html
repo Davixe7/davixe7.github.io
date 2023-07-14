@@ -75,7 +75,7 @@
   <nav class="navbar navbar-dark navbar-expand-lg sticky-top bg-lg-none">
     <div class="container ps-lg-0">
       <a class="navbar-brand" href="index.html">
-        <img src="./img/logo.png" alt="Logo" width="77" height="auto">
+        <img src="./img/logo.png" alt="Logo" width="90" height="auto">
       </a>
 
       <a class="nav-link d-sm-none me-3 ms-auto" href="#"><img src="./img/search.png" alt="#"></a>
@@ -151,7 +151,7 @@
     <div class="sectiont-header text-center" style="margin-bottom: 50px;">
       <div class="section-title undecorated">
         <div class="container">
-          <h2 class="text-accent">Our values</h2>
+          <h2 class="text-accent">Our Values</h2>
           <p class="text-center text-white" style="margin-top: 1rem;">
             We are dedicated to upholding these values in every aspect of our work.
           </p>
@@ -200,8 +200,8 @@
                 <h4 class="mvo-card__title">
                   Objectives
                 </h4>
-                <p class="text-start">
-                  <ol style="text-align: left; line-height: 3rem;">
+                <p class="text-center text-lg-start">
+                  <ol style="line-height: 3rem;">
                     <li>
                       Client-Centric Approach
                     </li>
@@ -240,41 +240,49 @@
     <div class="container">
       <div class="owl-carousel owl-theme members-carousel">
         <div class="item">
-          <div class="card">
-            <img src="./img/member01.jpg" alt="" class="card-img-top w-100">
+          <div class="card team-member-card">
+            <div class="team-member-card__picture">
+              <img src="./img/member01.jpg" alt="" class="card-img-top w-100">
+            </div>
             <div class="card-body">
-              <h3>Jane Smith</h3>
-              <p>Criminal Defense</p>
+              <h3 class="team-member-card__name">Jane Smith</h3>
+              <p class="team-member-card__title">Criminal Defense</p>
             </div>
           </div>
         </div>
-
+    
         <div class="item">
-          <div class="card">
-            <img src="./img/member02.jpg" alt="" class="card-img-top w-100">
+          <div class="card team-member-card">
+            <div class="team-member-card__picture">
+              <img src="./img/member02.jpg" alt="" class="card-img-top w-100">
+            </div>
             <div class="card-body">
-              <h3>Megan Brown</h3>
-              <p>Family Lawyer</p>
+              <h3 class="team-member-card__name">Megan Brown</h3>
+              <p class="team-member-card__title">Family Lawyer</p>
             </div>
           </div>
         </div>
-
+    
         <div class="item">
-          <div class="card">
-            <img src="./img/member03.jpg" alt="" class="card-img-top w-100">
+          <div class="card team-member-card">
+            <div class="team-member-card__picture">
+              <img src="./img/member03.jpg" alt="" class="card-img-top w-100">
+            </div>
             <div class="card-body">
-              <h3>Michael Johnson</h3>
-              <p>Real Estate Lawyer</p>
+              <h3 class="team-member-card__name">Michael Johnson</h3>
+              <p class="team-member-card__title">Real Estate Lawyer</p>
             </div>
           </div>
         </div>
-
+    
         <div class="item">
-          <div class="card">
-            <img src="./img/member04.jpg" alt="" class="card-img-top w-100">
+          <div class="card team-member-card">
+            <div class="team-member-card__picture">
+              <img src="./img/member04.jpg" alt="" class="card-img-top w-100">
+            </div>
             <div class="card-body">
-              <h3>Daniel Taylor</h3>
-              <p>Immigration Lawyer</p>
+              <h3 class="team-member-card__name">Daniel Taylor</h3>
+              <p class="team-member-card__title">Immigration Lawyer</p>
             </div>
           </div>
         </div>
@@ -424,6 +432,7 @@
       loop: true,
       margin: 30,
       nav: false,
+      autoplay: true, autoplayHoverPause: true,
       responsive: {
         0: {
           items: 1,
