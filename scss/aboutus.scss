@@ -1,3 +1,14 @@
+#about-us {
+  background-image: url('./../img/aboutus_bg.png');
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+#our-values {
+  background: url("./../img/logo_shade_center.png") no-repeat, linear-gradient(to right, #504F4F, rgba(103, 103, 103, 0.67));
+  background-size: contain;
+  background-position: center;
+}
+
 .about-us__content {
   .about-us__title {
     margin-bottom: 1rem;

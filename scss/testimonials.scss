@@ -1,72 +1,43 @@
 #testimonials {
   background: url('./../img/logo_shade.png') no-repeat -16px 100px, linear-gradient(to right, #504F4F, rgba(103,103,103, 67%));
 }
-
-.owl-carousel.owl-loaded.testimonials-carousel {
-  display: block;
-  .owl-stage-outer {
-    order: 1 !important;
+.owl-stage, .owl-item, .owl-item {
+  display: flex;
+  .item {
+    width: 100%;
+    display: flex;
   }
+}
+
+.testimonials-carousel.owl-carousel.owl-loaded {
   .owl-dots {
-    order: 0 !important;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
   }
   @media(min-width: 991px){
-    display: flex;
     .owl-dots {
       flex-flow: column;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
     }
   }
 }
 
-#testimonials .carousel-indicators {
-  bottom: -2rem;
-  margin: 0 auto;
-  padding: 0;
-  
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-
-  button {
-    background: #C4C4C4;
-    height: 15px;
-    width: 15px;
-    border-radius: 2px;
-    flex: 0 0 15px;
-    padding: 0;
-    border: none;
-    &.active {
-      background: #CD9B28;
-      flex: 0 0 20px;
-      width: 20px;
-      border-radius: 5px;
-    }
-  }
-
-  @media(min-width: 991px){
-    top: 0;
-    left: -2.5rem;
-    flex-flow: column;
-    margin: 0;
-
-    button {
-      margin-bottom: 1.25rem;
-    }
-  }
-}
-
-.ts-item {
+.testimonial-item {
   position: relative;
+  display: flex;
   cursor: pointer;
-  a {
-    text-decoration: none;
-  }
-  .card {
+
+  &__card {
     height: 335px;
+  }
+  &__video {
+    border-radius: 15px;
+    width: 100%;
   }
   &__title {
     color: #fff;
@@ -77,19 +48,32 @@
     text-transform: uppercase;
     text-decoration: none;
     line-height: 50px;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 100;
     margin-top: -50px;
     padding-right: 3rem;
     border-radius: 15px;
     background: linear-gradient(270deg, #CD9B28 14.19%, rgba(205, 155, 40, 0.00) 100%);
   }
-  @media(min-width: 991px){
-    &__title {
-      margin-right: 50px;
+  &__play-button {
+    position: absolute;
+    bottom: 50%;
+    width: calc(100% - 3rem);
+    transform: translateY(50%);
+    text-align: center;
+    i {
+      color: #fff;
+      font-size: 8rem;
     }
-    > .card {
-      width: 335px;
+  }
+
+  @media(min-width: 991px){
+    padding: 0 45px;
+    &__card, &__video {
+      width: 360px;
     }
   }
 }

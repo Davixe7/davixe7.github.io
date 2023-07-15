@@ -30,6 +30,34 @@
 @import './contactus.scss';
 @import './footer.scss';
 
+.contact-info-card {
+  margin-bottom: 1rem;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  &__icon {
+    flex: 0 0 50px;
+    height: 50px;
+    margin: 0 1rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: #95711F;
+    i { color: #fff; }
+  }
+  &__text {
+    color: #000;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+  }
+  &:hover &__text {
+    color: var(--accent);
+  }
+}
+
 section {
   padding-top: 60px;
   padding-bottom: 60px;

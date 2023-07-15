@@ -8,6 +8,26 @@
   }
 }
 
+.mobile-nav {
+  height: 100vh;
+  width: 100vw;
+  padding-top: 133px;
+  background: rgba(var(--bs-dark-rgb),1)!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  li {
+    padding: .5rem;
+    text-align: center;
+    a {
+      font-size: 1rem;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
 .socials-nav {
   @include reset-list;
   display: flex;
@@ -33,12 +53,16 @@
 
 .contact-nav {
   @extend .socials-nav;
+  flex: 1 0;
   li {
     margin-right: 1rem;
   }
   a i {
     transition: all .4s;
     &:hover { transform: scale(1.20);}
+  }
+  @media(min-width: 991px){
+    flex: initial;
   }
 }
 

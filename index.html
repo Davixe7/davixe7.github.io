@@ -20,6 +20,23 @@
 </head>
 
 <body>
+  <div class="d-none mobile-nav">
+    <ul>
+      <li>
+        <a href="#">Uno</a>
+      </li>
+      <li>
+        <a href="#">Dos</a>
+      </li>
+      <li>
+        <a href="#">Tres</a>
+      </li>
+      <li>
+        <a href="#">Cuatro</a>
+      </li>
+    </ul>
+  </div>
+
   <!-- BUTTON -->
   <div class="contact-fabs">
     <a class="contact-fab btn btn-primary btn-option" target="_blank" href="#" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="left">
@@ -50,7 +67,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="d-none d-lg-inline-block">
           <a href="https://youtube.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="YouTube"
             data-bs-placement="bottom">
             <i class="fa-brands fa-youtube"></i>
@@ -58,7 +75,7 @@
         </li>
       </ul>
 
-      <ul class="contact-nav  ms-auto me-lg-0">
+      <ul class="contact-nav ms-0 ms-lg-auto me-lg-0">
         <li>
           <a href="mailto:info@glamping.global" data-bs-toggle="tooltip" data-bs-title="info@glamping.global"
             data-bs-placement="bottom">
@@ -74,7 +91,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="ms-auto ms-lg-0">
           <a href="tel:8884334587">
             <i class="fa-solid fa-phone me-2"></i>
             <span>
@@ -109,8 +126,8 @@
           <div class="d-none d-lg-inline-block"
             style="border-right: 1px solid #fff; height: 1.55rem; align-self: center; margin: 0 1.3rem;"></div>
 
-          <a class="nav-link" href="#"><img src="./img/search.png" alt=""></a>
-          <a class="nav-link" href="#"><img src="./img/cart.png" alt=""></a>
+          <a class="nav-link d-none d-sm-inline-block" href="#"><img src="./img/search.png" alt=""></a>
+          <a class="nav-link d-none d-sm-inline-block" href="#"><img src="./img/cart.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -395,36 +412,45 @@
           </a>
         </div>
         <div class="col-lg-5 offset-lg-1 pe-lg-0">
-          <div class="owl-carousel owl-theme testimonials-carousel" style="width: 100%;">
+          <div class="owl-carousel owl-theme testimonials-carousel">
 
-            <div class="item ts-item ts-item--video">
-              <a href="https://www.youtube.com/watch?v=JpxsRwnRwCQ" class="owl-video" data-fancybox="testimonials">
-                <!-- <div class="ts-item__img" style="width: 335px;">
-                  <img src="./img/carousel.png" alt="#">
-                </div> -->
-                <div class="ts-item__title">
+            <div class="item">
+              <div class="testimonial-item">
+                <video
+                  class="testimonial-item__video"
+                  style="object-fit: cover; height: 100%;"
+                  playsinline="playsinline"
+                  src="./img/hero.mp4">
+                </video>
+                <div class="testimonial-item__play-button">
+                  <i class="fas fa-play"></i>
+                </div>
+                <div class="testimonial-item__title">
                   John Smith
                 </div>
               </a>
             </div>
+          </div>
 
-            <div class="item ts-item">
-              <div class="card rounded-5">
-                <div class="card-body p-4" style="height: 350px;">
-                  <div class="mb-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+            <div class="item">
+              <div class="testimonial-item">
+                <div class="testimonial-item__card rounded-5 bg-white" style="height: 350px;">
+                  <div class="card-body p-4">
+                    <div class="mb-3">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="mb-3">Excellent!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos fugiat hic quos
+                      voluptates, voluptatibus, nostrum iste corrupti odio laudantium dolores!</p>
                   </div>
-                  <h3 class="mb-3">Excellent!</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos fugiat hic quos
-                    voluptates, voluptatibus, nostrum iste corrupti odio laudantium dolores!</p>
                 </div>
-              </div>
-              <div class="ts-item__title">
-                John Doe
+                <div class="testimonial-item__title">
+                  John Doe
+                </div>
               </div>
             </div>
           </div>
@@ -566,6 +592,7 @@
       margin: 0,
       nav: false,
       items: 1,
+      singleItem: true,
       dots: false,
       autoplay: true, autoplayHoverPause: true
     })
@@ -577,8 +604,16 @@
       loop: true,
       margin: 10,
       nav: false,
-      video: true,
-      autoplay: true, autoplayHoverPause: true
+      autoplay: false, autoplayHoverPause: true
+    })
+
+    $('.testimonial-item__play-button').click(function(e){
+      $(this).siblings('video')
+      .trigger('play')
+      .attr('controls', 'controls')
+
+      $(this).hide()
+      $(this).next().hide()
     })
   </script>
 

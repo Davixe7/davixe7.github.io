@@ -83,10 +83,10 @@
       </a>
 
       <a class="nav-link d-sm-none me-3 ms-auto" href="#"><img src="./img/search.png" alt="#"></a>
-<a class="nav-link d-sm-none me-4" href="#"><img src="./img/cart.png" alt="#"></a>
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
-  <span class="navbar-toggler-icon"></span>
-</button>
+      <a class="nav-link d-sm-none me-4" href="#"><img src="./img/cart.png" alt="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
           <a class="nav-link" aria-current="page" href="about-us.html">About us</a>
@@ -184,8 +184,7 @@
 
         <div class="col-lg-6 order-lg-1">
           <div style="width: 100%; border-radius: 15px; overflow: hidden;">
-            <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0"
-              marginwidth="0"
+            <iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
               src="https://maps.google.com/maps?width=100%25&amp;height=500&amp;hl=en&amp;q=5191%20Eastside%20Hwy%20Stevensville,%20MT%2059870+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
               <a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a>
             </iframe>
@@ -193,9 +192,9 @@
         </div>
       </div>
 
-      <div class="row d-none">
-        <div class="col-lg-6 mx-auto py-5 contact-info">
-          <div class="card">
+      <div class="row d-lg-none">
+        <div class="col-lg-6 mx-auto pt-4 contact-info">
+          <div class="card text-center">
             <div class="card-header bg-white">
               <h4>
                 Contact Info
@@ -205,7 +204,7 @@
               <ul>
                 <li>
                   <i class="fa-solid fa-map-marker me-3"></i>
-                  5191 Eastside Hwy Stevensville, MT 59870
+                  5191 Eastside Hwy Stevensville, MT
                 </li>
                 <li>
                   <i class="fa-solid fa-envelope me-3"></i>
@@ -221,6 +220,42 @@
         </div>
       </div>
     </div>
+  </section>
+
+  <section id="contact-info" class="d-none pt-0 py-lg-md" style="padding: 30px 0;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-3 contact-info-card">
+          <a href="https://www.google.com/maps/place/5191+Eastside+Hwy,+Stevensville,+MT+59870,+EE.+UU./@46.576529,-114.0571129,17z/data=!3m1!4b1!4m6!3m5!1s0x535e9d7ef9f69d0d:0xcd730b6742b60b98!8m2!3d46.576529!4d-114.0571129!16s%2Fg%2F11cs73n6tc?entry=ttu" target="_blank">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-info-card__text">5191 Eastside Hwy Stevensville, MT</div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 contact-info-card">
+          <a href="mailto:info@glamping.global">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-info-card__text">
+              info@glamping.global
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-3 contact-info-card">
+          <a href="tel:+18884334587">
+            <div class="contact-info-card__icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-info-card__text">
+              Tel: 1-844-WEGLAMP
+            </div>
+          </a>
+        </div>
+      </div>
   </section>
 
   <!-- FOOTER -->
@@ -314,7 +349,8 @@
     <div class="copyright bg-black text-white py-4 pb-lg-0">
       <div class="container">
         <div class="row">
-          <div class="col-lg-10 mx-auto ps-lg-0 d-flex flex-column flex-lg-row justify-content-lg-between align-items-center">
+          <div
+            class="col-lg-10 mx-auto ps-lg-0 d-flex flex-column flex-lg-row justify-content-lg-between align-items-center">
             <div class="mb-3 mb-lg-0">
               Copyright © 2023 All rights reserved | This Website Was Designed And Developed by
             </div>
@@ -345,7 +381,7 @@
 
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    
+
     tooltipTriggerList.map(el => {
       el.addEventListener('click', () => {
         el.blur()
@@ -377,6 +413,9 @@
       }
     })
   </script>
+
+  
+  </style>
 </body>
 
 </html>
