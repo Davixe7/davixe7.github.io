@@ -8,14 +8,13 @@
   <link href="favicon.png" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="./js/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="./js/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="./css/app.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>Home</title>
 </head>
 
@@ -141,13 +140,13 @@
     <div class="hero__content">
       <div class="row mx-0">
         <div class="col-lg-9 flex-lg-column position-relative px-0">
-          <div class="frame"></div>
+          <div class="frame" data-aos="fade-in"></div>
           <div>
-            <div class="line">Customer Focused.</div>
-            <div class="line">Results Driven.</div>
+            <div class="line" data-aos="fade-right" data-aos-delay="400">Customer Focused.</div>
+            <div class="line" data-aos="fade-right" data-aos-delay="500">Results Driven.</div>
           </div>
-          <div class="underline"></div>
-          <a href="services.html" class="btn btn-primary btn-lg btn-3d ms-lg-auto mt-4">
+          <div class="underline" data-aos="fade-right" data-aos-delay="100"></div>
+          <a href="services.html" data-aos="fade-in" data-aos-delay="900" class="btn btn-primary btn-lg btn-3d ms-lg-auto mt-4">
             Get Now </a>
         </div>
       </div>
@@ -317,7 +316,7 @@
   <section id="choouseus" class="section-chooseus pb-lg-0">
     <div class="container">
       <div class="row">
-        <div class="col-lg-5 offset-lg-1 px-lg-0">
+        <div class="col-lg-5 offset-lg-1 px-lg-0" data-aos="fade-in">
           <div class="section-chooseus__card">
             <h2 class="section-chooseus__title">Why Choose Us</h2>
             <p>
@@ -352,7 +351,8 @@
         </div>
         <div class="col-lg-7">
           <div class="benefits-list text-lg-end">
-            <div class="benefits-item">
+
+            <div class="benefits-item" data-aos="fade-up" data-aos-delay="500">
               <div>
                 <div class="benefits-item__title">Support</div>
                 <p class="benefits-item__content">
@@ -365,7 +365,7 @@
               </div>
             </div>
 
-            <div class="benefits-item">
+            <div class="benefits-item" data-aos="fade-up">
               <div>
                 <div class="benefits-item__title">Good Lead</div>
                 <p class="benefits-item__content">
@@ -378,7 +378,7 @@
               </div>
             </div>
 
-            <div class="benefits-item">
+            <div class="benefits-item" data-aos="fade-up">
               <div>
                 <div class="benefits-item__title">Quality</div>
                 <p class="benefits-item__content">
@@ -482,10 +482,8 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 offset-lg-1 order-lg-1 footer__logo-column">
-
+          <div class="col-lg-4 offset-lg-1 order-lg-1 footer__logo-column" data-aos="fade-up" data-aos-delay="300">
             <img src="./img/logo_footer.png" alt="#" class="align-self-center">
-
             <ul class="socials-nav mx-auto justify-content-center">
               <li>
                 <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook"
@@ -510,7 +508,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 pe-lg-0 footer__contact-links">
+          <div class="col-lg-3 pe-lg-0 footer__contact-links" data-aos="fade-up" data-aos-delay="200">
             <h4 style="color: #CD9B28; font-size: 1.375rem; margin-bottom: 2rem;">
               More Information
             </h4>
@@ -541,7 +539,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 offset-lg-1 order-lg-3 footer__quick-links">
+          <div class="col-lg-3 offset-lg-1 order-lg-3 footer__quick-links" data-aos="fade-up" data-aos-delay="400">
             <h4 style="color: #CD9B28; font-size: 1.375rem; margin-bottom: 2rem;">
               Quick Links
             </h4>
@@ -583,20 +581,17 @@
   <script src="https://kit.fontawesome.com/702bb91c67.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="./js/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    $('.owl-carousel.services-carousel').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: false,
-      items: 1,
-      singleItem: true,
-      dots: false,
-      autoplay: true, autoplayHoverPause: true
-    })
+    // AOS transitions
+    $('h2').attr('data-aos', 'fade-up')
+    $('h2').attr('data-aos-delay', '200')
+    $('.btn.btn-3d').attr('data-aos', 'fade-in')
+    $('.btn').attr('data-aos-delay', '200')
+    AOS.init({duration: 1000});
 
+    //TESTIMONIALS CAROUSEL
     $('.owl-carousel.testimonials-carousel').owlCarousel({
       items: 1,
       singleItem: true,
@@ -606,7 +601,6 @@
       nav: false,
       autoplay: false, autoplayHoverPause: true
     })
-
     $('.testimonial-item__play-button').click(function(e){
       $(this).siblings('video')
       .trigger('play')
@@ -615,9 +609,8 @@
       $(this).hide()
       $(this).next().hide()
     })
-  </script>
 
-  <script>
+    // NAVBAR OPACITY
     const navbar = document.querySelector('.navbar-expand-lg')
     window.addEventListener('scroll', function (e) {
       if (window.window.scrollY > 0) {
@@ -627,9 +620,11 @@
       navbar.classList.remove('bg-dark')
     })
 
+    // TOOLTIPS > INITIALIZE
     const tooltipTriggerList = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')]
     const tooltipList = tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+    // TOOLTIPS > CLOSE AFTER CLICK
     tooltipTriggerList.map(el => {
       el.addEventListener('click', () => {
         el.blur()
@@ -639,9 +634,16 @@
       el.addEventListener('mouseleave', () => bootstrap.Tooltip.getInstance(el).enable())
     })
 
-    // Fancybox.bind('[data-fancybox]', {
-    //   Thumbs: false
-    // });
+    // HOME > SERVICES CAROUSEL
+    $('.owl-carousel.services-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      items: 1,
+      singleItem: true,
+      dots: false,
+      autoplay: true, autoplayHoverPause: true
+    })
   </script>
 </body>
 

@@ -531,7 +531,7 @@ p {
 
 .service-item__title {
   color: #6B6B6B;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -587,6 +587,7 @@ p {
   }
   .service-item__title {
     flex-flow: row;
+    font-size: 2rem;
   }
   .service-item__number {
     margin: 0 2.15rem 0 0;

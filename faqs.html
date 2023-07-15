@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="favicon.png" rel="icon">
+  <link href="favicon.png" rel="icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,19 +13,32 @@
   <link href="./js/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="./js/assets/owl.theme.default.min.css" rel="stylesheet">
   <link href="./css/app.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>FAQs</title>
 </head>
 
 <body>
+
+  <!-- BUTTON -->
+  <div class="contact-fabs">
+    <a class="contact-fab btn btn-primary btn-option" target="_blank" href="#" data-bs-toggle="tooltip" data-bs-title="Instagram" data-bs-placement="left">
+      <i class="fab fa-instagram contact-fab__icon" aria-hidden="true"></i>
+    </a>
+    <a class="contact-fab btn btn-primary btn-option" target="_blank" href="#" data-bs-toggle="tooltip" data-bs-title="Facebook" data-bs-placement="left">
+      <i class="fab fa-facebook contact-fab__icon" aria-hidden="true"></i>
+    </a>
+    <a class="contact-fab btn btn-primary">
+      <i class="fas fa-comments contact-fab__icon" aria-hidden="true"></i>
+    </a>
+  </div>
 
   <!-- PRE-HEADER -->
   <div class="preheader d-sm-flex sticky-top">
     <div class="preheader__content container px-lg-0">
       <ul class="socials-nav d-sm-flex">
         <li>
-          <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook"
-            data-bs-placement="bottom">
+          <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook" data-bs-placement="bottom">
             <i class="fa-brands fa-facebook"></i>
           </a>
         </li>
@@ -37,7 +50,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="d-none d-lg-inline-block">
           <a href="https://youtube.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="YouTube"
             data-bs-placement="bottom">
             <i class="fa-brands fa-youtube"></i>
@@ -45,7 +58,7 @@
         </li>
       </ul>
 
-      <ul class="contact-nav  ms-auto me-lg-0">
+      <ul class="contact-nav ms-0 ms-lg-auto me-lg-0">
         <li>
           <a href="mailto:info@glamping.global" data-bs-toggle="tooltip" data-bs-title="info@glamping.global"
             data-bs-placement="bottom">
@@ -61,7 +74,7 @@
           </a>
         </li>
 
-        <li>
+        <li class="ms-auto ms-lg-0">
           <a href="tel:8884334587">
             <i class="fa-solid fa-phone me-2"></i>
             <span>
@@ -95,8 +108,8 @@
           <div class="d-none d-lg-inline-block"
             style="border-right: 1px solid #fff; height: 1.55rem; align-self: center; margin: 0 1.3rem;"></div>
 
-          <a class="nav-link" href="#"><img src="./img/search.png" alt=""></a>
-          <a class="nav-link" href="#"><img src="./img/cart.png" alt=""></a>
+          <a class="nav-link d-none d-lg-inline-block" href="#"><img src="./img/search.png" alt=""></a>
+          <a class="nav-link d-none d-lg-inline-block" href="#"><img src="./img/cart.png" alt=""></a>
         </div>
       </div>
     </div>
@@ -249,36 +262,45 @@
           </a>
         </div>
         <div class="col-lg-5 offset-lg-1 pe-lg-0">
-          <div class="owl-carousel owl-theme testimonials-carousel" style="width: 100%;">
+          <div class="owl-carousel owl-theme testimonials-carousel">
 
-            <div class="item ts-item ts-item--video">
-              <a href="https://www.youtube.com/watch?v=JpxsRwnRwCQ" data-fancybox="testimonials">
-                <div class="ts-item__img" style="width: 335px;">
-                  <img src="./img/carousel.png" alt="#">
+            <div class="item">
+              <div class="testimonial-item">
+                <video
+                  class="testimonial-item__video"
+                  style="object-fit: cover; height: 100%;"
+                  playsinline="playsinline"
+                  src="./img/hero.mp4">
+                </video>
+                <div class="testimonial-item__play-button">
+                  <i class="fas fa-play"></i>
                 </div>
-                <div class="ts-item__title">
+                <div class="testimonial-item__title">
                   John Smith
                 </div>
               </a>
             </div>
+          </div>
 
-            <div class="item ts-item">
-              <div class="card rounded-5">
-                <div class="card-body p-4" style="height: 350px;">
-                  <div class="mb-3">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
+            <div class="item">
+              <div class="testimonial-item">
+                <div class="testimonial-item__card rounded-5 bg-white" style="height: 350px;">
+                  <div class="card-body p-4">
+                    <div class="mb-3">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="mb-3">Excellent!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos fugiat hic quos
+                      voluptates, voluptatibus, nostrum iste corrupti odio laudantium dolores!</p>
                   </div>
-                  <h3 class="mb-3">Excellent!</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dignissimos fugiat hic quos
-                    voluptates, voluptatibus, nostrum iste corrupti odio laudantium dolores!</p>
                 </div>
-              </div>
-              <div class="ts-item__title">
-                John Doe
+                <div class="testimonial-item__title">
+                  John Doe
+                </div>
               </div>
             </div>
           </div>
@@ -310,10 +332,8 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 offset-lg-1 order-lg-1 footer__logo-column">
-
+          <div class="col-lg-4 offset-lg-1 order-lg-1 footer__logo-column" data-aos="fade-up" data-aos-delay="300">
             <img src="./img/logo_footer.png" alt="#" class="align-self-center">
-
             <ul class="socials-nav mx-auto justify-content-center">
               <li>
                 <a href="https://facebook.com" target="_blank" data-bs-toggle="tooltip" data-bs-title="Facebook"
@@ -338,7 +358,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 pe-lg-0 footer__contact-links">
+          <div class="col-lg-3 pe-lg-0 footer__contact-links" data-aos="fade-up" data-aos-delay="200">
             <h4 style="color: #CD9B28; font-size: 1.375rem; margin-bottom: 2rem;">
               More Information
             </h4>
@@ -369,7 +389,7 @@
             </ul>
           </div>
 
-          <div class="col-lg-3 offset-lg-1 order-lg-3 footer__quick-links">
+          <div class="col-lg-3 offset-lg-1 order-lg-3 footer__quick-links" data-aos="fade-up" data-aos-delay="400">
             <h4 style="color: #CD9B28; font-size: 1.375rem; margin-bottom: 2rem;">
               Quick Links
             </h4>
@@ -392,7 +412,7 @@
       </div>
     </div>
 
-    <div class="copyright bg-black text-white py-4 pb-lg-0">
+    <div class="copyright bg-black text-white pb-lg-0">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 mx-auto ps-lg-0 d-flex flex-column flex-lg-row justify-content-lg-between align-items-center">
@@ -411,31 +431,36 @@
   <script src="https://kit.fontawesome.com/702bb91c67.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="./js/owl.carousel.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-    $('.owl-carousel.services-carousel').owlCarousel({
-      loop: true,
-      margin: 0,
-      nav: false,
-      items: 1,
-      autoplay: true, autoplayHoverPause: true
-    })
+    // AOS transitions
+    $('h2').attr('data-aos', 'fade-up')
+    $('h2').attr('data-aos-delay', '200')
+    $('.btn.btn-3d').attr('data-aos', 'fade-in')
+    $('.btn').attr('data-aos-delay', '200')
+    AOS.init();
 
+    //TESTIMONIALS CAROUSEL
     $('.owl-carousel.testimonials-carousel').owlCarousel({
       items: 1,
       singleItem: true,
-      center:true,
+      center: true,
       loop: true,
       margin: 10,
       nav: false,
-      video: true,
-      autoplay: true, autoplayHoverPause: true
+      autoplay: false, autoplayHoverPause: true
     })
-  </script>
-  
-  <script>
+    $('.testimonial-item__play-button').click(function(e){
+      $(this).siblings('video')
+      .trigger('play')
+      .attr('controls', 'controls')
+
+      $(this).hide()
+      $(this).next().hide()
+    })
+
+    // NAVBAR OPACITY
     const navbar = document.querySelector('.navbar-expand-lg')
     window.addEventListener('scroll', function (e) {
       if (window.window.scrollY > 0) {
@@ -445,9 +470,11 @@
       navbar.classList.remove('bg-dark')
     })
 
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    // TOOLTIPS > INITIALIZE
+    const tooltipTriggerList = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')]
+    const tooltipList = tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
+    // TOOLTIPS > CLOSE AFTER CLICK
     tooltipTriggerList.map(el => {
       el.addEventListener('click', () => {
         el.blur()
@@ -456,10 +483,6 @@
       })
       el.addEventListener('mouseleave', () => bootstrap.Tooltip.getInstance(el).enable())
     })
-
-    Fancybox.bind('[data-fancybox]', {
-      Thumbs: false
-    });
   </script>
 </body>
 
